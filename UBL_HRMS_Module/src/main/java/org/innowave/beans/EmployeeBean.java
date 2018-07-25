@@ -9,15 +9,15 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name="Jeevan1.Employee", uniqueConstraints= {@UniqueConstraint(columnNames= {"eid"})})
+@Table(uniqueConstraints= {@UniqueConstraint(columnNames= {"empl_Id"})})
 public class EmployeeBean {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="eid",length=10,nullable=false,unique=true)
+	@Column(name="empl_Id",length=10,unique=true)
 	private int empl_Id;
-	@Column(name="ename",length=20,nullable=false,unique=false)
+	@Column(name="empl_Name",length=20)
 	private String empl_Name;
-	@Column(name="eadd",length=20,nullable=false,unique=false)
+	@Column(name="empl_Add",length=20)
 	private String empl_Add;
 	
 	public int getEmpl_Id() {
